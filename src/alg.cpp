@@ -69,17 +69,17 @@ int countPairs3(int *arr, int len, int value) {
             len--;
         }
     }
-    for (int i = 0; i<len; i++){
+    for (int i = 0; i < len; i++) {
         if (arr[i] > value / 2) {
             continue;
         }
-        minArr= i + 1;
+        minArr = i + 1;
         maxArr = len - 1;
         while (minArr < maxArr) {
             midArr = (minArr + maxArr) / 2;
             if (arr[midArr] + arr[i] < value) {
-                minArr = midArr + 1;            
-            } else {  
+                minArr = midArr + 1;        
+            } else {
                 maxArr = midArr;
             }
         }
